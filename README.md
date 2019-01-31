@@ -55,8 +55,8 @@ The goal is to complete this challenge in 3 hours. To do this you will need to l
 
 1. Fork this repo
 1. Post a link to your repo in the tracker
-1. Install dependencies: `npm install`
-1. Run the project: `npm start`
+1. Install dependencies: `yarn install`
+1. Run the project: `yarn start`
 1. Visit the project at: [http://localhost:3000](http://localhost:3000)
 
 From here the project should update in the browser as you work. 
