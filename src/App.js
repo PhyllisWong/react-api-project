@@ -1,5 +1,6 @@
 
 import React, { Component } from 'react';
+import Money from './giveMoney';
 
 import './App.css';
 
@@ -25,7 +26,7 @@ class App extends Component {
     super(props)
 
     this.state = {
-      inputValue: '',     // Used to hold value entered in the input field
+      inputZipcode: '',     // Used to hold value entered in the input field
       weatherData: null,  // Used to hold data loaded from the weather API
     }
   }
@@ -35,7 +36,7 @@ class App extends Component {
     // ! Get your own API key ! 
     const apikey = process.env.REACT_APP_OPENWEATHERMAP_API_KEY
     // Get the zip from the input
-    const zip = this.state.inputValue
+    const zip = this.state.inputZipcode
     // Form an API request URL with the apikey and zip
     const url = `https://api.openweathermap.org/data/2.5/weather?zip=${zip},us&appid=${apikey}`
     // Get data from the API with fetch
@@ -90,32 +91,35 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+    //   <div className="App">
 
-        {/** This input uses the controlled component pattern */}
-        <form onSubmit={e => this.handleSubmit(e)}>
+    //     {/** This input uses the controlled component pattern */}
+    //     <form onSubmit={e => this.handleSubmit(e)}>
 
-          {/** 
-          This pattern is used for input and other form elements 
-          Set the value of the input to a value held in component state
-          Set the value held in component state when a change occurs at the input 
-          */}
-          <input 
-            value={this.state.inputValue} 
-            onChange={e => this.setState({ inputValue: e.target.value })}
-            type="text" 
-            pattern="(\d{5}([\-]\d{4})?)"
-            placeholder="enter zip"
-          />
+    //       {/** 
+    //       This pattern is used for input and other form elements 
+    //       Set the value of the input to a value held in component state
+    //       Set the value held in component state when a change occurs at the input 
+    //       */}
+    //       <input 
+    //         value={this.state.inputZipcode} 
+    //         // e represents the element, target is the tag
+    //         onChange={e => this.setState({ inputZipcode: e.target.value })}
+    //         type="text" 
+    //         // zipcode pattern regex
+    //         pattern="(\d{5}([\-]\d{4})?)"
+    //         placeholder="enter zip"
+    //       />
 
-          <button type="submit">Submit</button>
+    //       <button type="submit">Submit</button>
 
-        </form>
+    //     </form>
 
-        {/** Conditionally render this component */}
-        {this.renderWeather()}
+    //     {/** Conditionally render this component */}
+    //     {this.renderWeather()}
 
-      </div>
+    //   </div>
+      <Money funds={-24}/>
     );
   }
 }
