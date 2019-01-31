@@ -17,13 +17,13 @@ Forms work differently in react due to the way React handles the DOM with it's v
 
 In a nutshell the component holds the value of form elements on component state. This value is set when the component's value is changed, the form element's value is set to the value on state. This may sound a little circular because it is! 
 
-In the example is happens at the input element in the form. Be sure to look at the comments. 
+In the example it happens at the input element in the form. Be sure to look at the comments. 
 
 Read more [here](https://reactjs.org/docs/forms.html).
 
 ## Conditionally rendering components 
 
-Single Page Applications need to control what is displayed on the page without loading a new page. Using React you will do that by sometimes rendering a component and sometimes not rendering a component. Or, sometimes rendering one component, and rednering a different component at other stimes. 
+Single Page Applications need to control what is displayed on the page without loading a new page. Using React you will do that by sometimes rendering a component and sometimes not rendering a component. Or, sometimes rendering one component, and rednering a different component at other times. 
 
 We will refer to this conditionally rendering. 
 
