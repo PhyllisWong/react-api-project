@@ -1,4 +1,5 @@
 import React from 'react'
+import Temperature from './components/temperature'
 
 class Weather extends React.Component {
   // console.log(this.state.weatherData)
@@ -13,7 +14,8 @@ class Weather extends React.Component {
         <div>Title: {main}</div>
         <div>Desc: {description}</div>
         <div>Icon: {icon}</div>
-        <div>Temp: {temp}</div>
+        
+        <Temperature temp={temp}/>
         <div>Pressure: {pressure}</div>
         <div>Humidity: {humidity}</div>
         <div>Temp Min: {temp_min} Max:{temp_max}</div>
