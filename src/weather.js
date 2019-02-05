@@ -14,7 +14,7 @@ class Weather extends React.Component {
         <div>Title: {main}</div>
         <div>Desc: {description}</div>
         <div>Icon: {icon}</div>
-        
+        <div>Temp: {temp}</div>
         <Temperature temp={temp}/>
         <div>Pressure: {pressure}</div>
         <div>Humidity: {humidity}</div>

@@ -17,7 +17,7 @@ class Temperature extends Component {
     const celsius = kelvin - 273;
 
     // Calculating Fahrenheit temperature to the nearest integer
-    let fahrenheit = Math.floor(celsius * (9/5) + 32);
+    let fahrenheit = (celsius * (9/5) + 32);
 
     // Displaying the temperature using string interpolation
     console.log(`The temperature is ${fahrenheit} degrees fahrenheit.`)
@@ -29,7 +29,7 @@ class Temperature extends Component {
 
     return (
       <div className='temp-container'>
-        <h1 className='temp'>fahrenheit: {this.convertKelvinToFahrenheit(kelvin)}</h1>
+        <h1 className='temp'>{this.convertKelvinToFahrenheit(kelvin)} &#176;F</h1>
       </div>
       
     )
